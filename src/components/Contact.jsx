@@ -70,8 +70,12 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative z-10 bg-slate-950 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 relative z-10 bg-[#030712] text-slate-100 overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -81,14 +85,14 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-3 mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill text-xs font-bold text-red-300 border border-red-500/30">
-            <Mail className="w-4 h-4 text-red-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill text-xs font-bold text-indigo-300 border border-indigo-500/30">
+            <Mail className="w-4 h-4 text-indigo-400" />
             <span>Get In Touch</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-heading">
             Let's Work <span className="gradient-text">Together</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-red-500 via-rose-500 to-amber-400 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -101,26 +105,26 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="cyber-card p-8 rounded-3xl border border-red-500/25 bg-slate-900/90 shadow-2xl space-y-6">
+            <div className="cyber-card p-8 rounded-3xl border border-indigo-500/20 bg-slate-900/70 shadow-2xl space-y-6">
               <h3 className="text-2xl font-extrabold text-white font-heading">
                 Contact Information
               </h3>
               <p className="text-slate-300 text-sm leading-relaxed font-normal">
-                Reach out for software engineering roles, full-stack projects, Generative AI collaborations, or technical discussions!
+                Reach out for software engineering roles, Laravel/PHP projects, full-stack systems, or technical collaborations!
               </p>
 
               <div className="space-y-4 pt-2">
                 {/* Email Item */}
                 <a
                   href={`mailto:${personalDetails.email}`}
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-400 transition-colors group shadow-sm"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-indigo-400 transition-colors group shadow-sm"
                 >
-                  <div className="p-3 rounded-xl bg-red-500/10 text-red-400 border border-red-500/30 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                  <div className="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-xs text-slate-400 font-medium block">Email Address</span>
-                    <span className="text-sm font-bold text-white group-hover:text-red-300 transition-colors">
+                    <span className="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors">
                       {personalDetails.email}
                     </span>
                   </div>
@@ -129,14 +133,14 @@ export default function Contact() {
                 {/* Phone Item */}
                 <a
                   href={`tel:${personalDetails.phone}`}
-                  className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-red-400 transition-colors group shadow-sm"
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-indigo-400 transition-colors group shadow-sm"
                 >
-                  <div className="p-3 rounded-xl bg-red-500/10 text-red-400 border border-red-500/30 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                  <div className="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/30 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
                     <span className="text-xs text-slate-400 font-medium block">Phone Number</span>
-                    <span className="text-sm font-bold text-white group-hover:text-red-300 transition-colors">
+                    <span className="text-sm font-bold text-white group-hover:text-indigo-300 transition-colors">
                       {personalDetails.phone}
                     </span>
                   </div>
@@ -144,7 +148,7 @@ export default function Contact() {
 
                 {/* Location Item */}
                 <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 shadow-sm">
-                  <div className="p-3 rounded-xl bg-red-500/10 text-red-400 border border-red-500/30">
+                  <div className="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/30">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
@@ -158,10 +162,10 @@ export default function Contact() {
             </div>
 
             {/* Note box */}
-            <div className="p-6 rounded-2xl glass-pill border border-red-500/30 text-xs text-red-200 space-y-2 bg-slate-900/80">
+            <div className="p-6 rounded-2xl glass-pill border border-indigo-500/30 text-xs text-indigo-200 space-y-2 bg-slate-900/80">
               <span className="font-bold text-white block text-sm font-heading">💡 EmailJS Setup Note:</span>
               <p className="text-slate-300">
-                To route live contact messages directly to your inbox, update your Service ID, Template ID, and Public Key inside <code className="text-red-300 font-mono">src/config/emailjs.js</code>.
+                To route live contact messages directly to your inbox, update your Service ID, Template ID, and Public Key inside <code className="text-indigo-300 font-mono">src/config/emailjs.js</code>.
               </p>
             </div>
           </motion.div>
@@ -172,7 +176,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 cyber-card p-8 sm:p-10 rounded-3xl border border-red-500/25 bg-slate-900/90 shadow-2xl"
+            className="lg:col-span-7 cyber-card p-8 sm:p-10 rounded-3xl border border-indigo-500/20 bg-slate-900/70 shadow-2xl"
           >
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <h3 className="text-2xl font-extrabold text-white font-heading">
@@ -205,7 +209,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Vishnuvarthan Raja"
                     required
-                    className="w-full px-4 py-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all text-sm font-medium"
+                    className="w-full px-4 py-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-sm font-medium"
                   />
                 </div>
 
@@ -220,7 +224,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="name@example.com"
                     required
-                    className="w-full px-4 py-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all text-sm font-medium"
+                    className="w-full px-4 py-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-sm font-medium"
                   />
                 </div>
               </div>
@@ -234,8 +238,8 @@ export default function Contact() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Project Inquiry / Job Opportunity"
-                  className="w-full px-4 py-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all text-sm font-medium"
+                  placeholder="Software Developer Role / Project Inquiry"
+                  className="w-full px-4 py-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-sm font-medium"
                 />
               </div>
 
@@ -250,14 +254,14 @@ export default function Contact() {
                   onChange={handleChange}
                   placeholder="Hello Vishnuvarthan, I would like to discuss..."
                   required
-                  className="w-full px-4 py-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-red-400 focus:ring-1 focus:ring-red-400 transition-all text-sm resize-none font-medium"
+                  className="w-full px-4 py-3.5 rounded-2xl bg-slate-950 border border-slate-800 text-white placeholder-slate-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition-all text-sm resize-none font-medium"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={status.loading}
-                className="w-full py-4 rounded-2xl bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-rose-600 text-white font-extrabold text-base shadow-xl shadow-red-600/30 hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 border border-red-400/30 font-heading"
+                className="w-full py-4 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-500 hover:to-indigo-500 text-white font-extrabold text-base shadow-xl shadow-indigo-600/30 hover:scale-[1.01] transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 border border-indigo-400/30 font-heading cursor-pointer"
               >
                 {status.loading ? (
                   <>

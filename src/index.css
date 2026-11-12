@@ -19,44 +19,48 @@
   }
 
   body {
-    @apply bg-slate-950 text-slate-100 antialiased selection:bg-red-600 selection:text-white overflow-x-hidden transition-colors duration-300;
+    @apply bg-[#030712] text-slate-100 antialiased selection:bg-indigo-600 selection:text-white overflow-x-hidden transition-colors duration-300;
   }
 
   /* Light Theme Mode Base */
   html.light body {
-    @apply bg-slate-50 text-slate-900 selection:bg-red-600 selection:text-white;
+    @apply bg-slate-50 text-slate-900 selection:bg-indigo-600 selection:text-white;
   }
 }
 
 /* ==========================================================================
-   RED CRIMSON & CORAL THEME STYLES
+   PREMIUM DEVELOPER THEME (DARK CHARCOAL + ELECTRIC BLUE & PURPLE ACCENTS)
    ========================================================================== */
 .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-rose-400 to-amber-300 font-extrabold;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-300 to-purple-400 font-extrabold;
 }
 
-.gradient-text-red {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-rose-500 to-orange-400 font-extrabold;
+.gradient-text-accent {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 font-extrabold;
+}
+
+.gradient-text-purple {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 font-extrabold;
 }
 
 .cyber-card {
-  background: rgba(15, 23, 42, 0.88);
+  background: rgba(15, 23, 42, 0.72);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(239, 68, 68, 0.22);
-  box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  box-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   color: #f8fafc;
 }
 
 .cyber-card:hover {
-  border-color: rgba(239, 68, 68, 0.45);
-  box-shadow: 0 20px 50px -12px rgba(220, 38, 38, 0.25), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(99, 102, 241, 0.42);
+  box-shadow: 0 20px 48px -12px rgba(99, 102, 241, 0.22), inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
   transform: translateY(-4px);
 }
 
 .glass-panel {
-  background: rgba(15, 23, 42, 0.82);
+  background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -64,112 +68,26 @@
 }
 
 .glass-pill {
-  background: rgba(239, 68, 68, 0.12);
+  background: rgba(99, 102, 241, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  border: 1px solid rgba(99, 102, 241, 0.28);
 }
 
-/* ==========================================================================
-   LIGHT MODE OVERRIDES (CLEAN LIGHT GLASS THEME)
-   ========================================================================== */
-html.light .gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-cyan-600 to-indigo-600 font-extrabold;
-}
-
-html.light section {
-  background-color: #f8fafc !important;
-  color: #0f172a !important;
-}
-
-html.light .cyber-card {
-  background: rgba(255, 255, 255, 0.95) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(14, 165, 233, 0.25) !important;
-  box-shadow: 0 12px 35px -10px rgba(14, 165, 233, 0.15) !important;
-  color: #0f172a !important;
-}
-
-html.light .cyber-card:hover {
-  border-color: rgba(14, 165, 233, 0.5) !important;
-  box-shadow: 0 20px 45px -10px rgba(14, 165, 233, 0.25) !important;
-}
-
-html.light .glass-panel {
-  background: rgba(255, 255, 255, 0.9) !important;
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(226, 232, 240, 0.9) !important;
-  box-shadow: 0 10px 30px rgba(148, 163, 184, 0.15) !important;
-  color: #0f172a !important;
-}
-
-html.light .glass-pill {
-  background: rgba(14, 165, 233, 0.08) !important;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(14, 165, 233, 0.25) !important;
-  color: #0284c7 !important;
-}
-
-/* Light mode text colors for titles, headings, and paragraphs */
-html.light h1, 
-html.light h2, 
-html.light h3, 
-html.light h4,
-html.light .text-white {
-  color: #0f172a !important;
-}
-
-html.light p, 
-html.light .text-slate-200, 
-html.light .text-slate-300 {
-  color: #334155 !important;
-}
-
-html.light .text-slate-400,
-html.light .text-slate-500 {
-  color: #64748b !important;
-}
-
-/* Light mode inputs & forms */
-html.light input,
-html.light textarea {
-  background-color: #ffffff !important;
-  border-color: #cbd5e1 !important;
-  color: #0f172a !important;
-}
-
-html.light input::placeholder,
-html.light textarea::placeholder {
-  color: #94a3b8 !important;
-}
-
-/* Custom Scrollbar */
+/* Custom Smooth Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 9px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #020617;
-}
-
-html.light ::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #030712;
 }
 
 ::-webkit-scrollbar-thumb {
   background: #1e293b;
-  border-radius: 4px;
-}
-
-html.light ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  border-radius: 9999px;
+  border: 2px solid #030712;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #38bdf8;
-}
-
-html.light ::-webkit-scrollbar-thumb:hover {
-  background: #0284c7;
+  background: #4f46e5;
 }

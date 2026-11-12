@@ -35,10 +35,10 @@ export default function ParticleBackground() {
     window.addEventListener('resize', handleResize);
     window.addEventListener('mousemove', handleMouseMove);
 
-    // 3D Particle Constants (Warm Red, Crimson & Amber Embers)
+    // 3D Particle Constants (Electric Blue, Cyan & Purple Accents)
     const FOV = 400;
-    const NUM_PARTICLES = 90;
-    const COLORS = ['#ef4444', '#f43f5e', '#fb7185', '#f59e0b', '#dc2626', '#fda4af'];
+    const NUM_PARTICLES = 85;
+    const COLORS = ['#38bdf8', '#818cf8', '#a855f7', '#60a5fa', '#c084fc', '#06b6d4'];
 
     // Generate 3D Particles in a sphere/cube field
     const particles = Array.from({ length: NUM_PARTICLES }, () => {

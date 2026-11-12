@@ -5,8 +5,11 @@ import { experiences } from '../data/portfolioData';
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 relative z-10 bg-slate-950 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-24 relative z-10 bg-[#030712] text-slate-100 overflow-hidden">
+      {/* Background Accent Glow */}
+      <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <motion.div
@@ -16,20 +19,20 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-3 mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill text-xs font-bold text-red-300 border border-red-500/30">
-            <Briefcase className="w-4 h-4 text-red-400" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-pill text-xs font-bold text-indigo-300 border border-indigo-500/30">
+            <Briefcase className="w-4 h-4 text-indigo-400" />
             <span>Career History & Roles</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-heading">
             Work <span className="gradient-text">Experience</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-red-500 via-rose-500 to-amber-400 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 mx-auto rounded-full" />
         </motion.div>
 
         {/* Timeline Container */}
         <div className="relative max-w-4xl mx-auto">
           {/* Vertical Connecting Line */}
-          <div className="absolute left-4 sm:left-1/2 top-4 bottom-4 w-0.5 bg-gradient-to-b from-red-500 via-rose-500 to-amber-500 -translate-x-1/2 hidden sm:block opacity-40" />
+          <div className="absolute left-4 sm:left-1/2 top-4 bottom-4 w-0.5 bg-gradient-to-b from-blue-500 via-indigo-500 to-purple-500 -translate-x-1/2 hidden sm:block opacity-35" />
 
           <div className="space-y-12">
             {experiences.map((exp, idx) => {
@@ -46,31 +49,31 @@ export default function Experience() {
                   }`}
                 >
                   {/* Timeline Central Dot */}
-                  <div className="absolute left-4 sm:left-1/2 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-slate-950 border-2 border-red-400 shadow-[0_0_15px_rgba(239,68,68,0.6)] z-20 hidden sm:block">
-                    <div className="w-2.5 h-2.5 rounded-full bg-red-500 m-auto mt-0.5 animate-pulse" />
+                  <div className="absolute left-4 sm:left-1/2 top-6 -translate-x-1/2 w-5 h-5 rounded-full bg-slate-950 border-2 border-indigo-400 shadow-[0_0_15px_rgba(99,102,241,0.6)] z-20 hidden sm:block">
+                    <div className="w-2.5 h-2.5 rounded-full bg-indigo-500 m-auto mt-0.5 animate-pulse" />
                   </div>
 
                   {/* Card Content */}
                   <div className="w-full sm:w-1/2 sm:px-8">
-                    <div className="cyber-card p-6 sm:p-8 rounded-3xl border border-red-500/25 bg-slate-900/90 shadow-2xl group">
+                    <div className="cyber-card p-6 sm:p-8 rounded-3xl border border-indigo-500/20 bg-slate-900/70 shadow-2xl group hover:border-indigo-500/40 transition-all duration-300">
                       
                       {/* Role & Company Header */}
-                      <div className="flex flex-wrap items-start justify-between gap-2 border-b border-slate-800 pb-4 mb-4">
+                      <div className="flex flex-wrap items-start justify-between gap-2 border-b border-slate-800/80 pb-4 mb-4">
                         <div>
                           <span className="px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
                             {exp.type || exp.status}
                           </span>
-                          <h3 className="text-xl font-extrabold text-white mt-2 group-hover:text-red-300 transition-colors font-heading">
+                          <h3 className="text-xl font-extrabold text-white mt-2 group-hover:text-indigo-400 transition-colors font-heading">
                             {exp.role}
                           </h3>
-                          <h4 className="text-base font-semibold text-red-400 mt-0.5">
+                          <h4 className="text-base font-semibold text-indigo-400 mt-0.5">
                             {exp.company}
                           </h4>
                         </div>
 
                         <div className="text-xs text-slate-300 space-y-1 text-left font-medium">
-                          <div className="flex items-center justify-end gap-1.5 text-red-300">
-                            <Calendar className="w-3.5 h-3.5" />
+                          <div className="flex items-center justify-end gap-1.5 text-indigo-300">
+                            <Calendar className="w-3.5 h-3.5 text-indigo-400" />
                             <span>{exp.period}</span>
                           </div>
                           <div className="flex items-center justify-end gap-1.5 text-slate-400">
@@ -84,7 +87,7 @@ export default function Experience() {
                       <ul className="space-y-2 mb-4">
                         {exp.responsibilities.map((resp, rIdx) => (
                           <li key={rIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
-                            <CheckCircle2 className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
+                            <CheckCircle2 className="w-4 h-4 text-indigo-400 flex-shrink-0 mt-0.5" />
                             <span>{resp}</span>
                           </li>
                         ))}
@@ -92,17 +95,17 @@ export default function Experience() {
 
                       {/* Key Achievement */}
                       {exp.achievements && exp.achievements.length > 0 && (
-                        <div className="mt-4 p-3.5 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-start gap-2 text-xs font-medium text-amber-300">
-                          <Trophy className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                        <div className="mt-4 p-3.5 rounded-2xl bg-indigo-950/40 border border-indigo-500/20 flex items-start gap-2 text-xs font-medium text-indigo-300">
+                          <Trophy className="w-4 h-4 text-indigo-400 flex-shrink-0 mt-0.5" />
                           <div>
-                            <span className="font-extrabold text-amber-300">Key Impact: </span>
+                            <span className="font-extrabold text-indigo-300">Key Impact: </span>
                             {exp.achievements.join(' ')}
                           </div>
                         </div>
                       )}
 
                       {/* Tech Badges */}
-                      <div className="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800">
+                      <div className="flex flex-wrap gap-1.5 mt-5 pt-4 border-t border-slate-800/80">
                         {exp.technologies.map((tech, tIdx) => (
                           <span
                             key={tIdx}
