@@ -278,7 +278,7 @@ export default function Hero({ onOpenResumeModal }) {
               </div>
               <div className="border-l border-slate-800 pl-2">
                 <div className="text-xl sm:text-2xl font-black text-indigo-400 font-heading">Sopti AI</div>
-                <div className="text-xs text-slate-400 font-medium">Mar–Aug 2026</div>
+                <div className="text-xs text-slate-400 font-medium">Mar–Sep 2026</div>
               </div>
               <div className="border-l border-slate-800 pl-2">
                 <div className="text-xl sm:text-2xl font-black text-white font-heading">55%</div>

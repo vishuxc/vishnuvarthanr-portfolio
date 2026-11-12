@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, Code2, Cpu, Database, CheckCircle2, Sparkles, Layers, Terminal } from 'lucide-react';
+import { User, Code2, Cpu, Database, CheckCircle2, Sparkles, Layers, Terminal, ShieldCheck } from 'lucide-react';
 import { aboutContent, personalDetails } from '../data/portfolioData';
-import avatar3D from '../assets/avatar_3d.jpg';
+import profileImg from '../assets/profile.jpg';
 
 const highlights = [
   {
@@ -105,7 +105,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          {/* Right Cards: Key Focus Areas + 3D Persona Card */}
+          {/* Right Cards: Professional Profile Card + Focus Areas */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -113,21 +113,44 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-5 space-y-4 flex flex-col justify-between"
           >
-            {/* 3D Digital Persona Card */}
-            <div className="p-4 rounded-3xl bg-slate-900/80 border border-indigo-500/25 flex items-center gap-4 shadow-xl">
-              <div className="relative w-16 h-16 rounded-2xl overflow-hidden border-2 border-indigo-500/40 shadow-lg shadow-indigo-500/20 shrink-0">
-                <img src={avatar3D} alt="Vishnuvarthan Raja 3D Stylized Avatar" className="w-full h-full object-cover" />
-                <span className="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 border border-slate-950" />
+            {/* Premium Professional Profile Card (Real Photograph) */}
+            <motion.div
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.3 }}
+              className="p-5 sm:p-6 rounded-3xl bg-slate-900/80 border border-indigo-500/30 hover:border-indigo-400/60 shadow-[0_12px_35px_rgba(99,102,241,0.18)] flex flex-col sm:flex-row items-center gap-5 backdrop-blur-xl group transition-all"
+            >
+              {/* Professional Headshot Frame with subtle blue-purple glowing border */}
+              <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 border-indigo-500/40 shadow-xl shadow-indigo-500/20 shrink-0 group-hover:scale-105 transition-transform duration-500 ring-4 ring-indigo-500/10">
+                <img
+                  src={profileImg}
+                  alt="Vishnuvarthan Raja - Professional Headshot"
+                  className="w-full h-full object-cover object-top"
+                />
+                <span
+                  className="absolute bottom-1.5 right-1.5 w-3 h-3 rounded-full bg-emerald-400 border-2 border-slate-950 shadow-md animate-pulse"
+                  title="Available for Opportunities"
+                />
               </div>
-              <div className="space-y-0.5">
-                <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-indigo-300 uppercase tracking-wider font-mono">
-                  <Sparkles className="w-3 h-3 text-indigo-400" />
-                  <span>3D Digital Persona</span>
+
+              {/* Card Details */}
+              <div className="space-y-1.5 text-center sm:text-left flex-1">
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/30 text-[11px] font-bold text-indigo-300 uppercase tracking-wider font-mono">
+                  <ShieldCheck className="w-3.5 h-3.5 text-indigo-400" />
+                  <span>Verified Profile</span>
                 </div>
-                <div className="text-sm font-bold text-white font-heading">Stylized 3D Character Model</div>
-                <p className="text-xs text-slate-400">Custom 3D identity with cinematographic studio lighting.</p>
+                <div className="text-lg font-bold text-white font-heading">
+                  {personalDetails.name}
+                </div>
+                <p className="text-xs text-indigo-300 font-medium">
+                  Software Developer / Laravel PHP Developer
+                </p>
+                <div className="pt-1 flex items-center justify-center sm:justify-start gap-2 text-[11px] text-slate-400 font-medium">
+                  <span className="text-emerald-400 font-semibold">● Sopti AI</span>
+                  <span>•</span>
+                  <span>March 2026 – September 2026</span>
+                </div>
               </div>
-            </div>
+            </motion.div>
 
             {highlights.map((card, idx) => {
               const IconComp = card.icon;

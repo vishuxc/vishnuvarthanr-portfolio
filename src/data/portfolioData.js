@@ -35,15 +35,15 @@ export const personalDetails = {
 };
 
 export const aboutContent = {
-  bio: "I am a versatile Software Developer with practical industry experience at Sopti AI, BDreamz Global Solutions, and freelance projects, currently diving deep into Generative AI & LLMs (RAG pipelines, vector embeddings, semantic search). Skilled in Laravel, PHP, JavaScript, React.js, Node.js, Express.js, Python, Java, FastAPI, PyPDF, Sentence-Transformers, and Cosine Similarity vector stores."
+  bio: "I am a versatile Software Developer with professional Laravel/PHP experience at Sopti AI (March 2026 – September 2026), BDreamz Global Solutions, and freelance full-stack projects. Skilled in Laravel, PHP, JavaScript, React.js, Node.js, Express.js, MySQL, Python, REST APIs, and modern web application development."
 };
 
 export const experiences = [
   {
     id: 1,
-    role: "Software Developer Trainee",
+    role: "Software Developer / Laravel PHP Developer",
     company: "Sopti AI",
-    period: "Mar 2026 – Sep 2026",
+    period: "March 2026 – September 2026",
     location: "Chennai, India (Full-time)",
     status: "Completed",
     technologies: ["Laravel", "PHP", "JavaScript", "Python", "MySQL", "Git", "REST APIs", "Manual Testing"],

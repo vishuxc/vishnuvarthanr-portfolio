@@ -63,7 +63,7 @@ export default function ResumeSection({ onOpenModal }) {
               </h3>
             </div>
             <p className="text-sm text-slate-300 max-w-xl">
-              Includes Sopti AI Software Developer Trainee role (Mar–Aug 2026), Vector RAG Engine, and React/Node.js enterprise applications.
+              Includes Sopti AI Software Developer / Laravel PHP Developer role (March–September 2026), Vector RAG Engine, and React/Node.js enterprise applications.
             </p>
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-xs text-slate-300 pt-1 font-semibold">
               <span className="text-indigo-400">Latest Version: {personalDetails.resumeDate}</span>
